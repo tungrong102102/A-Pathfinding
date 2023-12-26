@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Unity\Test" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scenes" t="Include">
+          <e p="ChessboardLines.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="GameManager.cs" t="Include" />
+          <e p="Pathfding" t="Include">
+            <e p="GridControl.cs" t="Include" />
+            <e p="GridManager.cs" t="Include" />
+            <e p="GridMap.cs" t="Include" />
+            <e p="Pathfinding.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="TileSet.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Unity.VisualScripting.Generated" t="Include">
+          <e p="VisualScripting.Flow" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+      <e p="Test.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\PC\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\PC\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Test.-1164491158.00" t="ExcludeRecursive" />
+  </component>
+</project>

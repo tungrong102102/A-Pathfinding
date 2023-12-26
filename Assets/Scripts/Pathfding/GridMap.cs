@@ -7,7 +7,7 @@ public class GridMap : MonoBehaviour
 {
     public int length;
     public int height;
-
+    
     private int[,] grid;
 
     public void Init (int length, int height)

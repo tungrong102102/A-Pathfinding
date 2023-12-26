@@ -13,11 +13,25 @@ public class GridManager : MonoBehaviour
     private GridMap _gridMap;
 
     public TileSet tileSet;
+
+    public List<Vector3> test;
     private void Start()
     {
         _tilemap = GetComponent<Tilemap>();
         _gridMap = GetComponent<GridMap>();
-        _gridMap.Init(10,10);
+        BoundsInt bounds = _tilemap.cellBounds;
+        for (int x = bounds.x; x < bounds.x + bounds.size.x; x++)
+        {
+            for (int y = bounds.y; y < bounds.y + bounds.size.y; y++)
+            {
+                TileBase tile = _tilemap.GetTile(new Vector3Int(x, y, 0));
+                if (tile != null)
+                    Debug.Log($"Tile at ({x}, {y}): {tile.name}");
+                test.Add(new Vector3(x,y,0));
+            }
+        }
+        
+//        _gridMap.Init(10,10);
         // _gridMap.Set(1,1,2);
         // _gridMap.Set(1,2,2);
         // _gridMap.Set(2,1,2);

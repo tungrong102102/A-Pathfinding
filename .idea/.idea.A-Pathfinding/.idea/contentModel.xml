@@ -1,12 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\HP\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\HP\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_A-Pathfinding.1741444801.00" t="ExcludeRecursive" />
-    <e p="D:\Unity\Project 1 alabele\A-Pathfinding" t="IncludeRecursive">
+    <e p="C:\Unity\Test\A-Pathfinding\A-Pathfinding" t="IncludeRecursive">
       <e p="A-Pathfinding.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_" t="Include">
+          <e p="Base" t="Include">
+            <e p="BaseScripts" t="Include">
+              <e p="CharacterAimHandler.cs" t="Include" />
+              <e p="CharacterPathfindingMovementHandler.cs" t="Include" />
+              <e p="CharacterPositionMovementHandler.cs" t="Include" />
+              <e p="CharacterSwordHandler.cs" t="Include" />
+              <e p="CharacterWaypointsHandler.cs" t="Include" />
+              <e p="Enemy.cs" t="Include" />
+              <e p="Enemy_Base.cs" t="Include" />
+              <e p="EnemyHandler.cs" t="Include" />
+              <e p="FlyingBody.cs" t="Include" />
+              <e p="GameHandler_Setup.cs" t="Include" />
+              <e p="HealthSystem.cs" t="Include" />
+              <e p="MaterialTintColor.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+              <e p="Player_Base.cs" t="Include" />
+              <e p="PlayerPositionMovement.cs" t="Include" />
+              <e p="PlayerPunch.cs" t="Include" />
+              <e p="PlayerSword.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Stuff" t="Include">
+            <e p="CodeMonkey" t="Include">
+              <e p="Assets" t="Include" />
+              <e p="Assets.cs" t="Include" />
+              <e p="CMDebug.cs" t="Include" />
+              <e p="MonoBehaviours" t="Include">
+                <e p="CameraFollow.cs" t="Include" />
+                <e p="CameraFollowSetup.cs" t="Include" />
+                <e p="ComponentActions.cs" t="Include" />
+                <e p="PositionRendererSorter.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+              <e p="Resources" t="Include" />
+              <e p="Utils" t="Include">
+                <e p="Button_Sprite.cs" t="Include" />
+                <e p="Button_UI.cs" t="Include" />
+                <e p="FunctionPeriodic.cs" t="Include" />
+                <e p="FunctionTimer.cs" t="Include" />
+                <e p="FunctionUpdater.cs" t="Include" />
+                <e p="UI_Bar.cs" t="Include" />
+                <e p="UI_BarMultiple.cs" t="Include" />
+                <e p="UI_Sprite.cs" t="Include" />
+                <e p="UI_TextComplex.cs" t="Include" />
+                <e p="UtilsClass.cs" t="Include" />
+                <e p="World_Bar.cs" t="Include" />
+                <e p="World_Mesh.cs" t="Include" />
+                <e p="World_Sprite.cs" t="Include" />
+              </e>
+            </e>
+            <e p="GridPathfinding" t="Include">
+              <e p="BinaryTree.cs" t="Include" />
+              <e p="GridPathfinding.cs" t="Include" />
+              <e p="LastMoveTo.cs" t="Include" />
+              <e p="MapPos.cs" t="Include" />
+              <e p="PathNode.cs" t="Include" />
+              <e p="PathQueue.cs" t="Include" />
+              <e p="PathRoute.cs" t="Include" />
+              <e p="UnitMovement.cs" t="Include" />
+            </e>
+            <e p="Materials" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="AnimatedWalker.cs" t="Include" />
+              <e p="Blood_Handler.cs" t="Include" />
+              <e p="Dirt_Handler.cs" t="Include" />
+              <e p="FullscreenPlayMode.cs" t="Include" />
+              <e p="GameAssets.cs" t="Include" />
+              <e p="Generic_Mesh_Script.cs" t="Include" />
+              <e p="Resources" t="Include" />
+              <e p="ScreenshotHandler.cs" t="Include" />
+              <e p="SetSpriteSorting.cs" t="Include" />
+              <e p="Shoot_Flash.cs" t="Include" />
+              <e p="Sound_Manager.cs" t="Include" />
+              <e p="SpriteAnimator.cs" t="Include" />
+              <e p="UVVectors.cs" t="Include" />
+              <e p="V_UnitSkeleton_Composite_Walker.cs" t="Include" />
+              <e p="V_UnitSkeleton_Composite_Weapon.cs" t="Include" />
+              <e p="WeaponTracer.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="3DText.shader" t="Include" />
+              <e p="Endless_BW.shader" t="Include" />
+              <e p="Endless_FogOfWarPersistenEffect.shader" t="Include" />
+              <e p="Endless_Sprites_Default.shader" t="Include" />
+              <e p="Endless_Sprites_Hue.shader" t="Include" />
+              <e p="Endless_Sprites_Outline.shader" t="Include" />
+              <e p="Endless_Sprites_Shadow.shader" t="Include" />
+              <e p="Endless_Sprites_Shadow_Vertical.shader" t="Include" />
+              <e p="Endless_Sprites_SolidColorTint.shader" t="Include" />
+              <e p="Endless_Sprites_Test.shader" t="Include" />
+              <e p="Endless_TestUnlit.shader" t="Include" />
+              <e p="Endless_TransColor.shader" t="Include" />
+              <e p="Endless_TransDiffuse.shader" t="Include" />
+              <e p="Endless_TransDiffuse_Alpha.shader" t="Include" />
+              <e p="Endless_TransDiffuseWithTint.shader" t="Include" />
+              <e p="Endless_UI_Blur.shader" t="Include" />
+              <e p="Endless_UI_Greyscale.shader" t="Include" />
+              <e p="Endless_UI_SolidColorTint.shader" t="Include" />
+              <e p="GrayscaleToAlpha.shader" t="Include" />
+              <e p="MultiplyTwoTextures.shader" t="Include" />
+              <e p="VertexLitCG.shader" t="Include" />
+            </e>
+            <e p="Textures" t="Include">
+              <e p="UnitSpriteSheets" t="Include" />
+            </e>
+            <e p="V_Animation" t="Include">
+              <e p="BodyPart.cs" t="Include" />
+              <e p="CLZF2.cs" t="Include" />
+              <e p="Resources" t="Include">
+                <e p="AnimationData" t="Include">
+                  <e p="_Default" t="Include">
+                    <e p="Animations" t="Include">
+                      <e p="d_Misc" t="Include" />
+                      <e p="dArrow" t="Include" />
+                      <e p="dBareHands" t="Include" />
+                      <e p="dChicken" t="Include" />
+                      <e p="dChuckBoris" t="Include" />
+                      <e p="dDagger" t="Include" />
+                      <e p="dDualDagger" t="Include" />
+                      <e p="dMarine" t="Include" />
+                      <e p="dMinion" t="Include" />
+                      <e p="dOgre" t="Include" />
+                      <e p="dPersian" t="Include" />
+                      <e p="dShielder" t="Include" />
+                      <e p="dSpaceNinja" t="Include" />
+                      <e p="dSpartan" t="Include" />
+                      <e p="dSwordShield" t="Include" />
+                      <e p="dSwordTwoHandedBack" t="Include" />
+                      <e p="dZombie" t="Include" />
+                    </e>
+                    <e p="AnimationTypes" t="Include" />
+                  </e>
+                  <e p="Animations" t="Include" />
+                  <e p="AnimationTypes" t="Include" />
+                </e>
+              </e>
+              <e p="SaveSystem.cs" t="Include" />
+              <e p="UnitAnim.cs" t="Include" />
+              <e p="UnitAnimType.cs" t="Include" />
+              <e p="UVType.cs" t="Include" />
+              <e p="V_Animation.asmdef" t="Include" />
+              <e p="V_Animation.cs" t="Include" />
+              <e p="V_Skeleton_Anim.cs" t="Include" />
+              <e p="V_Skeleton_Frame.cs" t="Include" />
+              <e p="V_Skeleton_Updater.cs" t="Include" />
+              <e p="V_UnitAnimation.cs" t="Include" />
+              <e p="V_UnitSkeleton.cs" t="Include" />
+            </e>
+            <e p="V_ObjectSystem" t="Include">
+              <e p="V_IActiveInactive.cs" t="Include" />
+              <e p="V_IDestroySelf.cs" t="Include" />
+              <e p="V_IHasWorldPosition.cs" t="Include" />
+              <e p="V_IObjectActiveLogic.cs" t="Include" />
+              <e p="V_IObjectTransform.cs" t="Include" />
+              <e p="V_IObjectTransformBody.cs" t="Include" />
+              <e p="V_Main.cs" t="Include" />
+              <e p="V_Object.cs" t="Include" />
+              <e p="V_ObjectLogic_SkeletonUpdater.cs" t="Include" />
+              <e p="V_ObjectTransform.cs" t="Include" />
+              <e p="V_ObjectTransform_LateUpdate.cs" t="Include" />
+              <e p="V_ObjectTransformBody.cs" t="Include" />
+              <e p="V_TimeScaleManager.cs" t="Include" />
+            </e>
+          </e>
+          <e p="TextMesh Pro" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="LiberationSans - OFL.txt" t="Include" />
+            </e>
+            <e p="Resources" t="Include">
+              <e p="Fonts &amp; Materials" t="Include" />
+              <e p="LineBreaking Following Characters.txt" t="Include" />
+              <e p="LineBreaking Leading Characters.txt" t="Include" />
+              <e p="Shaders" t="Include">
+                <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+                <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+                <e p="TMP_Bitmap.shader" t="Include" />
+                <e p="TMP_SDF Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+                <e p="TMP_SDF-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+                <e p="TMP_SDF-Surface.shader" t="Include" />
+                <e p="TMP_SDF.shader" t="Include" />
+                <e p="TMP_Sprite.shader" t="Include" />
+                <e p="TMPro.cginc" t="Include" />
+                <e p="TMPro_Properties.cginc" t="Include" />
+                <e p="TMPro_Surface.cginc" t="Include" />
+              </e>
+              <e p="Sprite Assets" t="Include" />
+              <e p="Style Sheets" t="Include" />
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="EmojiOne Attribution.txt" t="Include" />
+              <e p="EmojiOne.json" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scenes" t="Include">
           <e p="ChessboardLines.cs" t="Include" />
         </e>
@@ -18,6 +215,7 @@
             <e p="GridMap.cs" t="Include" />
             <e p="Pathfinding.cs" t="Include" />
             <e p="Player.cs" t="Include" />
+            <e p="Target.cs" t="Include" />
             <e p="TileSet.cs" t="Include" />
           </e>
         </e>
@@ -28,6 +226,9 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
+      <e p="V_Animation.csproj" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\PC\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\PC\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_A-Pathfinding.-1648123226.00" t="ExcludeRecursive" />
   </component>
 </project>

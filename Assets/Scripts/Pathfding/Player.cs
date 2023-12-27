@@ -1,32 +1,118 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
-public class Player : MonoBehaviour
+namespace Pathfding
 {
-  [SerializeField] private Tilemap targetTileMap;
-  public List<Vector3> test;
-
-  private void Start()
+    public class Player : MonoBehaviour
     {
-        Vector3Int cellPosition = targetTileMap.WorldToCell(transform.position);
-        transform.position = targetTileMap.GetCellCenterWorld(cellPosition);
-       
-    }
-  
+        [SerializeField] private Tilemap targetTileMap;
+        [SerializeField] private Tilemap higntligntMap;
+        public TileBase highTileBase;
+        public Pathfinding _pathfinding;
+        public Transform target;
+        public List<Vector3> test;
+        private int currentX = 0;
+        private int currentY = 0;
+        private int targetX = 0;
+        private int targetY = 0;
+        private bool isMove;
+        public static int block = 0;
+        public List<PathNode> path;
+        public int currentIndex = 0;
+        public float speed;
+        private void Start()
+        {
+            Vector3Int cellPosition = targetTileMap.WorldToCell(transform.position);
+            transform.position = targetTileMap.GetCellCenterWorld(cellPosition);
+            Debug.Log(block++);
 
-  public void Update()
-    {
-        
-    }
+        }
 
-    //    public void Update()
+
+        public void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                currentX = (int) transform.position.x;
+                currentY = (int) transform.position.y;  
+                // targetX = (int) target.position.x;
+                // targetY = (int) target.position.y;
+                Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3Int clickPosition = targetTileMap.WorldToCell(worldPoint);
+
+               
+                isMove = true;
+            }
+
+            if (isMove)
+            {
+             
+                targetX = (int) target.position.x;
+                targetY = (int)  target.position.y;
+                path = _pathfinding.FindPath(currentX, currentY, targetX, targetY);
+                if (path != null)
+                {
+                    for (int i = 0; i < path.Count; i++)
+                    {
+                        targetTileMap.SetTile(new Vector3Int(path[i].xPos, path[i].yPos, 0), highTileBase);
+                    }
+                }
+                Move();
+            }
+        }
+
+        public void Move()
+        {
+            if (path != null)
+            {
+                PathNode currentNode = path[currentIndex];
+                Vector3 positionTarget = new Vector3(currentNode.xPos,currentNode.yPos,0);
+                if (Vector3.Distance(positionTarget, transform.position) > 0.1f)
+                {
+                    Vector3 dir = (positionTarget - transform.position).normalized;
+                    transform.position += dir * speed * Time.deltaTime;
+                }
+                else
+                {
+                    _pathfinding.SetGrid(currentNode.xPos, currentNode.yPos,0);
+                    currentIndex++;
+                    if (currentIndex >= path.Count - 1)
+                    {
+
+                        transform.position = targetTileMap.WorldToCell(transform.position);
+                        isMove = false;
+                        
+                    }
+                }
+            }
+        }
+
+        private void OnMouseDown()
+        {
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int cellPosition = targetTileMap.WorldToCell(worldPoint);
+            transform.position = targetTileMap.GetCellCenterWorld(cellPosition);
+        }
+
+        private void OnMouseDrag()
+        {
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int cellPosition = targetTileMap.WorldToCell(worldPoint);
+            transform.position = targetTileMap.GetCellCenterWorld(cellPosition);
+        }
+
+    }
+}
+
+
+//    public void Update()
 //    {
-//        if (Input.GetMouseButtonDown(0))
-//        {
+       
 //            targetTileMap.ClearAllTiles();
 //            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 //            Vector3Int clickPosition = targetTileMap.WorldToCell(worldPoint);
@@ -35,37 +121,9 @@ public class Player : MonoBehaviour
 //            // targetPosX = clickPosition.x;
 //            // targetPosY = clickPosition.y;
 //            //
-//            // List<PathNode> path = _pathfinding.FindPath(currentX,currentY,targetPosX,targetPosY);
+        
 //            //
-//            // if (path != null)
-//            // {
-//            //     for (int i = 0; i < path.Count; i++)
-//            //     {
-//            //         targetTileMap.SetTile(new Vector3Int(path[i].xPos,path[i].yPos ,0),highTileBase);
-//            //     }
-//            //     currentX = targetPosX;
-//            //     currentY = targetPosY;
-//            //}
+            
 //        }
     //}
-    private void OnMouseDown()
-    {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int cellPosition = targetTileMap.WorldToCell(worldPoint);
-        transform.position = targetTileMap.GetCellCenterWorld(cellPosition);
-    }
 
-    private void OnMouseDrag()
-    {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int cellPosition = targetTileMap.WorldToCell(worldPoint);
-        transform.position = targetTileMap.GetCellCenterWorld(cellPosition);
-        foreach (var temp in test)
-        {
-            if (temp == cellPosition)
-            {
-                Debug.Log(temp + " " + cellPosition);
-            }
-        }
-    }
-}

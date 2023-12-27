@@ -11,6 +11,7 @@ public class GridManager : MonoBehaviour
 {
     private Tilemap _tilemap;
     private GridMap _gridMap;
+    private Pathfinding _pathfinding;
 
     public TileSet tileSet;
 
@@ -19,23 +20,33 @@ public class GridManager : MonoBehaviour
     {
         _tilemap = GetComponent<Tilemap>();
         _gridMap = GetComponent<GridMap>();
+        _pathfinding = GetComponent<Pathfinding>();
         BoundsInt bounds = _tilemap.cellBounds;
+        _gridMap.Init(bounds.size.x,bounds.size.y);
         for (int x = bounds.x; x < bounds.x + bounds.size.x; x++)
         {
             for (int y = bounds.y; y < bounds.y + bounds.size.y; y++)
             {
                 TileBase tile = _tilemap.GetTile(new Vector3Int(x, y, 0));
                 if (tile != null)
-                    Debug.Log($"Tile at ({x}, {y}): {tile.name}");
-                test.Add(new Vector3(x,y,0));
+                {
+                    test.Add(new Vector3(x,y,0));
+                    _gridMap.Set(x,y,0);
+                }
+                else
+                {
+                    _gridMap.Set(x, y, 2);
+                }
             }
         }
+        _pathfinding.gridMap = _gridMap;
+        _pathfinding.Init(); 
         
 //        _gridMap.Init(10,10);
-        // _gridMap.Set(1,1,2);
-        // _gridMap.Set(1,2,2);
-        // _gridMap.Set(2,1,2);
-        UpdateTileMap();
+        // _gridMap.Set(13,5,2);
+        // _gridMap.Set(13,6,2);
+        // _gridMap.Set(13,4,2);
+        // UpdateTileMap();
     }
 
     void UpdateTileMap()
@@ -60,11 +71,9 @@ public class GridManager : MonoBehaviour
         _tilemap.SetTile(new Vector3Int(x,y,0),tileSet.tiles[tileId] );
     }
 
-    public void Set(int x, int y,int to)
-    {
-        _gridMap.Set(x,y,to);
-        UpdateTile(x,y);
-    }
-
-
+    // public void Set(int x, int y,int to)
+    // {
+    //     _gridMap.Set(x,y,to);
+    //     UpdateTile(x,y);
+    // }
 }

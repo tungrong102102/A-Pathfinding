@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class PathNode 
 {
     public int xPos;
@@ -8,6 +10,7 @@ public class PathNode
     public int gValue;
     public int hValue;
     public PathNode parentNode;
+    public bool isFull;
 
     public int fValue 
     {
@@ -26,20 +29,14 @@ public class PathNode
 [RequireComponent(typeof(GridMap))]
 public class Pathfinding : MonoBehaviour
 {
-    GridMap gridMap;
-    PathNode[,] pathNodes;
-
-    private void Start()
-    {
-        Init();
-    }
-
-    private void Init()
+    public GridMap gridMap;
+    public PathNode[,] pathNodes;
+    
+    public void Init()
     {
         if (gridMap == null) { gridMap = GetComponent<GridMap>(); }
 
         pathNodes = new PathNode[gridMap.length, gridMap.height];
-
         for (int x = 0; x < gridMap.length; x++) 
         {
             for (int y = 0; y < gridMap.height; y++) 
@@ -93,6 +90,9 @@ public class Pathfinding : MonoBehaviour
                 for (int y = -1; y < 2; y++) 
                 {
                     if (x == 0 && y == 0) { continue; }
+                    if (x == 1 && y == 1 || y== 1 && x == 1) {continue; } 
+                    if (x == -1 && y == -1 || y == -1 && x == -1) {continue; }
+                    if(x == 1 && y == -1 || y == 1 && x == -1){continue; }
                     if (gridMap.CheckPosition(currentNode.xPos + x, currentNode.yPos + y) == false) 
                     {
                         continue;
@@ -127,9 +127,14 @@ public class Pathfinding : MonoBehaviour
             }
 
         }
-
         return null;
     }
+
+    public void SetGrid(int x, int y , int to)
+    {
+        gridMap.Set(x,y,to);
+    }
+    
 
     private List<PathNode> RetracePath(PathNode startNode, PathNode endNode)
     {
@@ -154,6 +159,5 @@ public class Pathfinding : MonoBehaviour
 
         if (distX > distY) { return 14 * distY + 10 * (distX - distY);  }
         return 14 * distX + 10 * (distY - distX);
-
     }
 }

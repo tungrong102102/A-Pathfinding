@@ -18,6 +18,7 @@ public class GridMap : MonoBehaviour
     }
     public void Set(int x, int y, int to)
     {
+    
         if(CheckPosition(x,y) == false)
         {
            return;

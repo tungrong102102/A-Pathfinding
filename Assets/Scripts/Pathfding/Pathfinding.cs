@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Obvious.Soap;
 using UnityEngine;
 
 [Serializable]
@@ -29,17 +30,15 @@ public class PathNode
 [RequireComponent(typeof(GridMap))]
 public class Pathfinding : MonoBehaviour
 {
-    public GridMap gridMap;
+    public GridMapVariable GridMap;
     public PathNode[,] pathNodes;
     
     public void Init()
     {
-        if (gridMap == null) { gridMap = GetComponent<GridMap>(); }
-
-        pathNodes = new PathNode[gridMap.length, gridMap.height];
-        for (int x = 0; x < gridMap.length; x++) 
+        pathNodes = new PathNode[GridMap.size.x, GridMap.size.x];
+        for (int x = 0; x < GridMap.size.x; x++) 
         {
-            for (int y = 0; y < gridMap.height; y++) 
+            for (int y = 0; y < GridMap.size.x; y++) 
             {
                 pathNodes[x, y] = new PathNode(x,y);
             }
@@ -93,7 +92,7 @@ public class Pathfinding : MonoBehaviour
                     if (x == 1 && y == 1 || y== 1 && x == 1) {continue; } 
                     if (x == -1 && y == -1 || y == -1 && x == -1) {continue; }
                     if(x == 1 && y == -1 || y == 1 && x == -1){continue; }
-                    if (gridMap.CheckPosition(currentNode.xPos + x, currentNode.yPos + y) == false) 
+                    if (GridMap.CheckPosition(currentNode.xPos + x, currentNode.yPos + y) == false) 
                     {
                         continue;
                     }
@@ -105,7 +104,7 @@ public class Pathfinding : MonoBehaviour
             for (int i = 0; i < neighbourNodes.Count; i++) 
             {
                 if (closedList.Contains(neighbourNodes[i])) { continue; }
-                if (gridMap.CheckWalkable(neighbourNodes[i].xPos, neighbourNodes[i].yPos) == false) { continue; }
+                if (GridMap.CheckWalkable(neighbourNodes[i].xPos, neighbourNodes[i].yPos) == false) { continue; }
 
                 int movementCost = currentNode.gValue + CalculateDistance(currentNode, neighbourNodes[i]);
 
@@ -129,12 +128,6 @@ public class Pathfinding : MonoBehaviour
         }
         return null;
     }
-
-    public void SetGrid(int x, int y , int to)
-    {
-        gridMap.Set(x,y,to);
-    }
-    
 
     private List<PathNode> RetracePath(PathNode startNode, PathNode endNode)
     {

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Unity\Test\A-Pathfinding\A-Pathfinding" t="IncludeRecursive">
+    <e p="C:\Users\HP\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\HP\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_A-Pathfinding.1741444801.00" t="ExcludeRecursive" />
+    <e p="D:\Unity\Project 1 alabele\A-Pathfinding" t="IncludeRecursive">
       <e p="A-Pathfinding.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_" t="Include">
@@ -204,6 +208,214 @@
             </e>
           </e>
         </e>
+        <e p="Obvious" t="Include">
+          <e p="Soap" t="Include">
+            <e p="Core" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Bindings" t="Include">
+                  <e p="BindComparisonToUnityEventDrawer.cs" t="Include" />
+                  <e p="BindTextDrawer.cs" t="Include" />
+                  <e p="BindTextMeshProDrawer.cs" t="Include" />
+                </e>
+                <e p="Misc" t="Include">
+                  <e p="ObjectEditor.cs" t="Include" />
+                  <e p="ScriptableBasePropertyDrawer.cs" t="Include" />
+                  <e p="ShowIfPropertyDrawer.cs" t="Include" />
+                  <e p="SoapSettings.cs" t="Include" />
+                  <e p="SoapSettingsDrawer.cs" t="Include" />
+                </e>
+                <e p="Obvious.Soap.Editor.asmdef" t="Include" />
+                <e p="Resources" t="Include">
+                  <e p="GUISkins" t="Include" />
+                  <e p="Icons" t="Include" />
+                  <e p="Templates" t="Include">
+                    <e p="EventListenerTemplate.cs.txt" t="Include" />
+                    <e p="ScriptableEventTemplate.cs.txt" t="Include" />
+                    <e p="ScriptableListTemplate.cs.txt" t="Include" />
+                    <e p="ScriptableVariableTemplate.cs.txt" t="Include" />
+                  </e>
+                  <e p="Texts" t="Include">
+                    <e p="1_ScriptableVariables.txt" t="Include" />
+                    <e p="2_Bindings.txt" t="Include" />
+                    <e p="3_ScriptableLists.txt" t="Include" />
+                    <e p="4_ScriptableEvents.txt" t="Include" />
+                    <e p="5_Save.txt" t="Include" />
+                  </e>
+                </e>
+                <e p="ScriptableEvents" t="Include">
+                  <e p="ScriptableEventGenericDrawer.cs" t="Include" />
+                  <e p="ScriptableEventNoParamDrawer.cs" t="Include" />
+                  <e p="ScriptableEventNoParamPropertyDrawer.cs" t="Include" />
+                  <e p="ScriptableEventPropertyDrawer.cs" t="Include" />
+                </e>
+                <e p="ScriptableLists" t="Include">
+                  <e p="ScriptableListDrawer.cs" t="Include" />
+                  <e p="ScriptableListPropertyDrawer.cs" t="Include" />
+                </e>
+                <e p="ScriptableVariables" t="Include">
+                  <e p="ScriptableVariableDrawer.cs" t="Include" />
+                  <e p="ScriptableVariableGuidGenerator.cs" t="Include" />
+                  <e p="ScriptableVariablePropertyDrawer.cs" t="Include" />
+                  <e p="VariableReferences" t="Include">
+                    <e p="VariableReferenceDrawer.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Tests" t="Include">
+                  <e p="GuidTest.cs" t="Include" />
+                  <e p="Obvious.Soap.Editor.Tests.asmdef" t="Include" />
+                  <e p="ScriptableListTest.cs" t="Include" />
+                  <e p="ScriptableVariableTest.cs" t="Include" />
+                  <e p="VariableReferenceTest.cs" t="Include" />
+                </e>
+                <e p="Utilities" t="Include">
+                  <e p="SoapEditorUtils.cs" t="Include" />
+                  <e p="SoapFileUtils.cs" t="Include" />
+                  <e p="SoapInspectorUtils.cs" t="Include" />
+                </e>
+                <e p="Windows" t="Include">
+                  <e p="EventsDebugWindow" t="Include">
+                    <e p="EventsDebugWindow.cs" t="Include" />
+                  </e>
+                  <e p="SoapWindow" t="Include">
+                    <e p="SoapWindow.cs" t="Include" />
+                    <e p="SoapWindowInitializer.cs" t="Include" />
+                  </e>
+                  <e p="SoapWindowBase.cs" t="Include" />
+                  <e p="SoapWizard" t="Include">
+                    <e p="CreateTypePopUpWindow.cs" t="Include" />
+                    <e p="RenamePopUpWindow.cs" t="Include" />
+                    <e p="SoapWizardWindow.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="Bindings" t="Include">
+                  <e p="BindComparisonToUnityEvent.cs" t="Include" />
+                  <e p="BindFillingImage.cs" t="Include" />
+                  <e p="BindGraphicColor.cs" t="Include" />
+                  <e p="BindInputField.cs" t="Include" />
+                  <e p="BindRendererColor.cs" t="Include" />
+                  <e p="BindSlider.cs" t="Include" />
+                  <e p="BindText.cs" t="Include" />
+                  <e p="BindTextMeshPro.cs" t="Include" />
+                  <e p="BindToggle.cs" t="Include" />
+                  <e p="CacheComponent.cs" t="Include" />
+                </e>
+                <e p="Misc" t="Include">
+                  <e p="IDrawObjectsInInspector.cs" t="Include" />
+                  <e p="ScriptableBase.cs" t="Include" />
+                  <e p="ShowIfAttribute.cs" t="Include" />
+                </e>
+                <e p="Obvious.Soap.asmdef" t="Include" />
+                <e p="Save" t="Include">
+                  <e p="IReset.cs" t="Include" />
+                  <e p="ISave.cs" t="Include" />
+                </e>
+                <e p="ScriptableEvents" t="Include">
+                  <e p="EventListener" t="Include">
+                    <e p="EventListenerBase.cs" t="Include" />
+                    <e p="EventListenerBool.cs" t="Include" />
+                    <e p="EventListenerColor.cs" t="Include" />
+                    <e p="EventListenerFloat.cs" t="Include" />
+                    <e p="EventListenerGameObject.cs" t="Include" />
+                    <e p="EventListenerGeneric.cs" t="Include" />
+                    <e p="EventListenerInt.cs" t="Include" />
+                    <e p="EventListenerNoParam.cs" t="Include" />
+                    <e p="EventListenerString.cs" t="Include" />
+                    <e p="EventListenerVector2.cs" t="Include" />
+                    <e p="EventListenerVector3.cs" t="Include" />
+                  </e>
+                  <e p="ScriptableEvent.cs" t="Include" />
+                  <e p="ScriptableEventBase.cs" t="Include" />
+                  <e p="ScriptableEventBool.cs" t="Include" />
+                  <e p="ScriptableEventColor.cs" t="Include" />
+                  <e p="ScriptableEventFloat.cs" t="Include" />
+                  <e p="ScriptableEventGameObject.cs" t="Include" />
+                  <e p="ScriptableEventInt.cs" t="Include" />
+                  <e p="ScriptableEventNoParam.cs" t="Include" />
+                  <e p="ScriptableEventString.cs" t="Include" />
+                  <e p="ScriptableEventVector2.cs" t="Include" />
+                  <e p="ScriptableEventVector3.cs" t="Include" />
+                </e>
+                <e p="ScriptableLists" t="Include">
+                  <e p="ScriptableList.cs" t="Include" />
+                  <e p="ScriptableListBase.cs" t="Include" />
+                  <e p="ScriptableListGameObject.cs" t="Include" />
+                  <e p="ScriptableListVector3.cs" t="Include" />
+                </e>
+                <e p="ScriptableVariables" t="Include">
+                  <e p="BoolVariable.cs" t="Include" />
+                  <e p="ColorVariable.cs" t="Include" />
+                  <e p="FloatVariable.cs" t="Include" />
+                  <e p="GameObjectVariable.cs" t="Include" />
+                  <e p="IntVariable.cs" t="Include" />
+                  <e p="ScriptableVariable.cs" t="Include" />
+                  <e p="ScriptableVariableBase.cs" t="Include" />
+                  <e p="StringVariable.cs" t="Include" />
+                  <e p="VariableReferences" t="Include">
+                    <e p="BoolReference.cs" t="Include" />
+                    <e p="ColorReference.cs" t="Include" />
+                    <e p="FloatReference.cs" t="Include" />
+                    <e p="IntReference.cs" t="Include" />
+                    <e p="StringReference.cs" t="Include" />
+                    <e p="VariableReference.cs" t="Include" />
+                    <e p="Vector2Reference.cs" t="Include" />
+                    <e p="Vector3Reference.cs" t="Include" />
+                  </e>
+                  <e p="Vector2Variable.cs" t="Include" />
+                  <e p="Vector3Variable.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Documentation" t="Include" />
+            <e p="Examples" t="Include">
+              <e p="Content" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Prefabs" t="Include">
+                  <e p="UI" t="Include" />
+                </e>
+                <e p="ScriptableEvents" t="Include" />
+                <e p="ScriptableVariables" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="AutoDisabler.cs" t="Include" />
+                  <e p="AutoRotator.cs" t="Include" />
+                  <e p="Enemy.cs" t="Include" />
+                  <e p="EnemyMovement.cs" t="Include" />
+                  <e p="FadeOut.cs" t="Include" />
+                  <e p="GameManager.cs" t="Include" />
+                  <e p="Health.cs" t="Include" />
+                  <e p="HealVignette.cs" t="Include" />
+                  <e p="HyperlinkButton.cs" t="Include" />
+                  <e p="ListCount.cs" t="Include" />
+                  <e p="Player.cs" t="Include" />
+                  <e p="PlayerInput.cs" t="Include" />
+                  <e p="PlayerMovement.cs" t="Include" />
+                  <e p="PlayersNotifier.cs" t="Include" />
+                  <e p="PlayerSpawner.cs" t="Include" />
+                  <e p="PositionSaver.cs" t="Include" />
+                  <e p="ScriptableListPlayer.cs" t="Include" />
+                  <e p="VfxSpawner.cs" t="Include" />
+                </e>
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="Obvious.Soap.Example.asmdef" t="Include" />
+              <e p="Scenes" t="Include">
+                <e p="1_Variables" t="Include" />
+                <e p="2_Bindings" t="Include" />
+                <e p="3_List" t="Include" />
+                <e p="4_Events" t="Include" />
+                <e p="5_Save" t="Include" />
+              </e>
+            </e>
+            <e p="package.json" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Trinary Software" t="Include">
+            <e p="Editor" t="Include" />
+            <e p="Timing.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scenes" t="Include">
           <e p="ChessboardLines.cs" t="Include" />
         </e>
@@ -213,6 +425,7 @@
             <e p="GridControl.cs" t="Include" />
             <e p="GridManager.cs" t="Include" />
             <e p="GridMap.cs" t="Include" />
+            <e p="GridMapVariable.cs" t="Include" />
             <e p="Pathfinding.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="Target.cs" t="Include" />
@@ -223,12 +436,14 @@
           <e p="VisualScripting.Flow" t="Include" />
         </e>
       </e>
+      <e p="Obious.Soap.Example.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
+      <e p="Obvious.Soap.csproj" t="IncludeRecursive" />
+      <e p="Obvious.Soap.Editor.csproj" t="IncludeRecursive" />
+      <e p="Obvious.Soap.Editor.Tests.csproj" t="IncludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
       <e p="V_Animation.csproj" t="IncludeRecursive" />
     </e>
-    <e p="C:\Users\PC\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\PC\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_A-Pathfinding.-1648123226.00" t="ExcludeRecursive" />
   </component>
 </project>
